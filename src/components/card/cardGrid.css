@@ -1,0 +1,25 @@
+.CardGrid {
+  text-align: center;
+  width: 32%;
+  margin: 5px;
+}
+
+.CardGrid .ant-card {
+  background: transparent;
+}
+
+.CardGrid_item {
+  position: relative;
+}
+
+.CardGrid strong {
+  font-size: 18px;
+}
+.CardGrid small {
+  font-size: 10px;
+}
+
+.CardGrid pre {
+  position: absolute;
+  top: 2px;
+}

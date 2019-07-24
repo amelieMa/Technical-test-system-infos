@@ -5,11 +5,9 @@ import {columns} from './shared/SystemInfosGrid'
 
 import './systemInfos.css'
 
-
 const metricksData = require('datas/metrics.json')
 
-export const SystemInfos = () => {
-
+export const SystemInfosAll = () => {
   const dataSource = metricksData.map((data) => {
     const key = data.time
     return {...data, key: key}
@@ -17,7 +15,7 @@ export const SystemInfos = () => {
 
   return (
     <>
-      'coucou system'
+      <h1>All data</h1>
       <Table
         scroll={{ x: 2200 }}
         dataSource={dataSource}
@@ -36,4 +34,4 @@ export const SystemInfos = () => {
 
 
 //export default (withTranslation('productOffer')(ProductOfferPricePeriodPageList)
-export default SystemInfos
+export default SystemInfosAll

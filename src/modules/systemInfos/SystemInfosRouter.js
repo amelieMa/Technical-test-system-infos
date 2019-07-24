@@ -1,10 +1,16 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
-import SystemInfos from './SystemInfos'
+import SystemInfosFiltered from './SystemInfosFiltered'
+import SystemInfosAll from './SystemInfosAll'
 
 const SystemInfosRouter = (
-  <Route path="/" component={SystemInfos} />
+  <>
+    <Switch>
+      <Route path="/" component={SystemInfosFiltered} exact/>
+      <Route path="/all" component={SystemInfosAll} exact/>
+    </Switch>
+  </>
 )
 
 export default SystemInfosRouter
