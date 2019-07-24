@@ -228,3 +228,176 @@ export const columns = [
     key: 'writ',
   },
 ]
+
+export const columnsWithoutParent = [
+  {
+    title: 'System Time',
+    dataIndex: 'time',
+    key: 'time',
+    defaultSortOrder: 'descend',
+    sorter: (a, b) => {
+      return dateSort(a, b, 'time')
+    }
+  },
+  {
+    title: 'Number of files',
+    dataIndex: 'files',
+    key: 'files',
+    sorter: (a, b) => {
+      return nbSort(a, b, 'files')
+    }
+  },
+  {
+    title: 'Number of inodes',
+    dataIndex: 'inodes',
+    key: 'inodes',
+    sorter: (a, b) => {
+      return nbSort(a, b, 'inodes')
+    }
+  },
+  {
+    title: 'Network Received',
+    dataIndex: 'recv',
+    key: 'recv',
+    sorter: (a, b) => {
+      return nbSort(a, b, 'recv')
+    },
+    render: (data) => bytesFormat('#9dc9e0', data)
+  },
+  {
+    title: 'NetworkSended',
+    dataIndex: 'send',
+    key: 'send',
+    sorter: (a, b) => {
+      return nbSort(a, b, 'send')
+    },
+    render: (data) => bytesFormat('#9dc9e0', data)
+  },
+  {
+    title: 'Memory Used',
+    dataIndex: 'used',
+    key: 'used',
+    sorter: (a, b) => {
+      return nbSort(a, b, 'used')
+    },
+    render: (data) => bytesFormat('#faf0e6', data)
+  },
+  {
+    title: 'Memory Buff',
+    dataIndex: 'buff',
+    key: 'buff',
+    sorter: (a, b) => {
+      return nbSort(a, b, 'buff')
+    },
+    render: (data) => bytesFormat('#faf0e6', data)
+  },
+  {
+    title: 'Memory Cach',
+    dataIndex: 'cach',
+    key: 'cach',
+    sorter: (a, b) => {
+      return nbSort(a, b, 'cach')
+    },
+    render: (data) => bytesFormat('#faf0e6', data)
+  },
+  {
+    title: 'Memory Free',
+    dataIndex: 'free',
+    key: 'free',
+    sorter: (a, b) => {
+      return nbSort(a, b, 'free')
+    },
+    render: (data) => bytesFormat('#faf0e6', data)
+  },
+  {
+    title: 'CPU Used',
+    dataIndex: 'usr',
+    key: 'usr',
+    sorter: (a, b) => {
+      return nbSort(a, b, 'usr')
+    },
+    render: (data) => percentFormat('#a5d152', data)
+  },
+  {
+    title: 'CPU Sys',
+    dataIndex: 'sys',
+    key: 'sys',
+    sorter: (a, b) => {
+      return nbSort(a, b, 'sys')
+    },
+    render: (data) => percentFormat('#a5d152', data)
+  },
+  {
+    title: 'CPU Idl',
+    dataIndex: 'idl',
+    key: 'idl',
+    sorter: (a, b) => {
+      return nbSort(a, b, 'idl')
+    },
+    render: (data) => percentFormat('#a5d152', data)
+  },
+  {
+    title: 'CPU Wai',
+    dataIndex: 'wai',
+    key: 'wai',
+    sorter: (a, b) => {
+      return nbSort(a, b, 'wai')
+    },
+    render: (data) => percentFormat('#a5d152', data)
+  },
+  {
+    title: 'CPU Hiq',
+    dataIndex: 'hiq',
+    key: 'hiq',
+    sorter: (a, b) => {
+      return nbSort(a, b, 'hiq')
+    },
+    render: (data) => percentFormat('#a5d152', data)
+  },
+  {
+    title: 'CPU Siq',
+    dataIndex: 'siq',
+    key: 'siq',
+    sorter: (a, b) => {
+      return nbSort(a, b, 'siq')
+    },
+    render: (data) => percentFormat('#a5d152', data)
+  },
+  {
+    title: 'Load average last minute',
+    dataIndex: '1m',
+    key: '1m',
+    sorter: (a, b) => {
+      return nbSort(a, b, '1m')
+    },
+    render: (data) => percentFormat('#ff9a8f', data)
+  },
+  {
+    title: 'Load average last 5 minutes',
+    dataIndex: '5m',
+    key: '5m',
+    sorter: (a, b) => {
+      return nbSort(a, b, '5m')
+    },
+    render: (data) => percentFormat('#ff9a8f', data)
+  },
+  {
+    title: 'Load average last 15 minutes',
+    dataIndex: '15m',
+    key: '15m',
+    sorter: (a, b) => {
+      return nbSort(a, b, '15m')
+    },
+    render: (data) => percentFormat('#ff9a8f', data)
+  },
+  {
+    title: 'Read bytes on disk',
+    dataIndex: 'read',
+    key: 'read',
+  },
+  {
+    title: 'Write bytes on disk',
+    dataIndex: 'writ',
+    key: 'writ',
+  },
+]
