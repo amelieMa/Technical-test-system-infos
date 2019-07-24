@@ -3,20 +3,32 @@ import {Table} from 'antd'
 
 import {columns} from './shared/SystemInfosGrid'
 
+import './systemInfos.css'
+
+
 const metricksData = require('datas/metrics.json')
 
 export const SystemInfos = () => {
-  console.log(metricksData)
+
   const dataSource = metricksData.map((data) => {
     const key = data.time
     return {...data, key: key}
   })
 
-  console.log(dataSource)
   return (
     <>
       'coucou system'
-      <Table dataSource={dataSource} columns={columns} bordered/>
+      <Table
+        scroll={{ x: 2200 }}
+        dataSource={dataSource}
+        columns={columns}
+        bordered
+        pagination={{
+          pageSizeOptions: ['10', '20', '100', '200'],
+          showSizeChanger: true,
+          defaultPageSize: 10,
+        }}
+      />
     </>
   )
 }

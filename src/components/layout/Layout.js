@@ -2,7 +2,7 @@ import React from 'react'
 
 import SystemInfosRouter from 'modules/systemInfos/SystemInfosRouter'
 
-//import './_Layout.scss'
+import './layout.css'
 
 const Layout = () => {
   return (

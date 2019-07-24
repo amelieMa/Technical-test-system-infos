@@ -40,6 +40,7 @@ export const columns = [
     title: 'Number of files',
     dataIndex: 'files',
     key: 'files',
+    width: 100,
     sorter: (a, b) => {
       return nbSort(a, b, 'files')
     }
@@ -48,6 +49,7 @@ export const columns = [
     title: 'Number of inodes',
     dataIndex: 'inodes',
     key: 'inodes',
+    width: 100,
     sorter: (a, b) => {
       return nbSort(a, b, 'inodes')
     }
@@ -186,6 +188,7 @@ export const columns = [
         title: 'last minute',
         dataIndex: '1m',
         key: '1m',
+        width: 80,
         sorter: (a, b) => {
           return nbSort(a, b, '1m')
         },
@@ -195,6 +198,7 @@ export const columns = [
         title: 'last 5 minutes',
         dataIndex: '5m',
         key: '5m',
+        width: 80,
         sorter: (a, b) => {
           return nbSort(a, b, '5m')
         },
@@ -204,6 +208,7 @@ export const columns = [
         title: 'last 15 minutes',
         dataIndex: '15m',
         key: '15m',
+        width: 80,
         sorter: (a, b) => {
           return nbSort(a, b, '15m')
         },
@@ -215,6 +220,7 @@ export const columns = [
     title: 'Read bytes on disk',
     dataIndex: 'read',
     key: 'read',
+    width: 60,
   },
   {
     title: 'Write bytes on disk',
