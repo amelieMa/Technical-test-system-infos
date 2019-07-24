@@ -1,6 +1,6 @@
 import React from 'react'
 
-import SystemInfosRouter from '../../modules/systemInfos/SystemInfosRouter'
+import SystemInfosRouter from 'modules/systemInfos/SystemInfosRouter'
 
 //import './_Layout.scss'
 
