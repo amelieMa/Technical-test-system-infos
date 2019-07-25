@@ -2,6 +2,7 @@ import React from 'react'
 import { Formik } from 'formik'
 import { Form, DatePicker, Button, Select } from 'antd'
 
+import './systemInfosForm.css'
 
 const SystemInfosForm = ({
   submitSearch
@@ -25,10 +26,11 @@ const SystemInfosForm = ({
       }) => {
         return (
           <Form className="form" onSubmit={handleSubmit}>
-            <label>Sélectionner un paramètre :</label>
+            <label>Please select parameter :</label>
             <Select
               name={'param'}
-              className="form_select"
+              className="form_select form_element"
+              placeholder="Parameters"
               onChange={(value) => setFieldValue('param', value)}
             >
               <Select.Option value="files">files</Select.Option>
@@ -39,12 +41,12 @@ const SystemInfosForm = ({
               <Select.Option value="buff">Memory buff</Select.Option>
               <Select.Option value="siq">Memory siq</Select.Option>
             </Select>
-            <label>Sélectionner une plage horaire :</label>
-            <div className="form_datePickerGroup">
+            <label>Please select date interval :</label>
+            <div className="form_datePickerGroup  form_element">
               <DatePicker
                 className="form_datePicker"
                 onChange={(value) => setFieldValue('dateStart', value)}
-                placeholder="Date de début"
+                placeholder="Start At"
                 style={{ minWidth: '100px' }}
                 showTime={true}
                 name={'dateStart'}
@@ -53,7 +55,7 @@ const SystemInfosForm = ({
               <DatePicker
                 className="form_datePicker"
                 onChange={(value) => setFieldValue('dateEnd', value)}
-                placeholder="Date de fin"
+                placeholder="End At"
                 style={{ minWidth: '100px' }}
                 showTime={true}
                 name={'dateEnd'}
@@ -64,7 +66,7 @@ const SystemInfosForm = ({
               htmlType="submit"
               className="form_submitButton"
             >
-              Rechercher
+              Search
             </Button>
           </Form>
         )

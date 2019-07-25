@@ -1,0 +1,40 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_element,
+.form_datePicker.ant-calendar-picker,
+.ant-select.form_element {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form_submitButton {
+  margin-bottom: 35px;
+}
+
+
+@media (min-width: 767px) {
+  .form.ant-form {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .form_select {
+    max-width: 15%;
+  }
+
+  .form_element,
+  .form_datePicker.ant-calendar-picker,
+  .ant-select.form_element {
+    width: auto;
+    min-width: 150px;
+    margin: 0 10px;
+  }
+
+  .form_submitButton {
+    margin-bottom: 0;
+  }
+}

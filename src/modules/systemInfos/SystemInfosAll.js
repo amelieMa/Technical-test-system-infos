@@ -31,7 +31,4 @@ export const SystemInfosAll = () => {
   )
 }
 
-
-
-//export default (withTranslation('productOffer')(ProductOfferPricePeriodPageList)
 export default SystemInfosAll

@@ -1,15 +1,16 @@
 .CardGrid {
+  width: 100%;
+  margin-bottom: 15px;
   text-align: center;
-  width: 32%;
-  margin: 5px;
 }
 
 .CardGrid .ant-card {
   background: transparent;
 }
 
-.CardGrid_item {
+.CardGrid_item.ant-card-grid {
   position: relative;
+  padding: 24px 5px;
 }
 
 .CardGrid strong {
@@ -22,4 +23,44 @@
 .CardGrid pre {
   position: absolute;
   top: 2px;
+  left: 10px;
+  font-size: 10px;
+}
+
+@media (min-width: 767px) {
+  .CardGrid {
+    width: 45%;
+    margin: 5px;
+  }
+
+  .CardGrid strong {
+    font-size: 16px;
+  }
+
+  .CardGrid pre {
+    left: 10px;
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .CardGrid {
+    width: 32%;
+  }
+
+  .CardGrid strong {
+    font-size: 18px;
+  }
+
+}
+
+@media (min-width: 1600px) {
+  .CardGrid {
+    width: 32%;
+  }
+
+  .CardGrid pre {
+    left: 20px;
+    font-size: 14px;
+  }
 }
