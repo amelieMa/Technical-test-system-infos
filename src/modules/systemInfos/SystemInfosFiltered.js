@@ -57,8 +57,6 @@ class SystemInfosFiltered extends React.Component {
     return reverseData[0]
   }
 
-
-
   render() {
     console.log('render')
 
